@@ -62,7 +62,6 @@ def metric_card(label,value,card_id,color):
     st.markdown(f"<div style='border:1px solid {color};border-radius:12px;padding:12px;background:#fff;min-height:88px'><div style='font-size:13px;color:#475569'>{label}</div><div style='font-size:27px;font-weight:750;color:{color}'>{value}</div></div>",unsafe_allow_html=True)
     if st.button("Ver lista",key="btn_"+card_id,use_container_width=True):
         st.session_state["card_filter"]=card_id
-        st.session_state["active_page"]="Dashboard"
         st.rerun()
 
 with st.sidebar:
